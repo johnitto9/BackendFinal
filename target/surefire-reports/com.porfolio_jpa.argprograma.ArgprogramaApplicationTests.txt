@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.porfolio_jpa.argprograma.ArgprogramaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.899 s - in com.porfolio_jpa.argprograma.ArgprogramaApplicationTests
