@@ -29,14 +29,19 @@ public class Persona {
     @Size(min = 1, max = 200, message = "no cumple con longitud")
     private String url_foto;
 
+    @Size(min = 1, max = 200, message = "no cumple con longitud")
+    private String url_portada;
+
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String acerca_de, String url_foto) {
+    public Persona(Long id, String nombre, String apellido, String acerca_de, String url_foto, String url_portada) {
+        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.acerca_de = acerca_de;
         this.url_foto = url_foto;
+        this.url_portada = url_portada;
     }
 
     public Long getId() {
@@ -78,6 +83,15 @@ public class Persona {
     public void setUrl_foto(String url_foto) {
         this.url_foto = url_foto;
     }
-    
+
+    public String getUrl_portada() {
+        return url_portada;
+    }
+
+    public void setUrl_portada(String url_portada) {
+        this.url_portada = url_portada;
+    }
+
+
     
 }

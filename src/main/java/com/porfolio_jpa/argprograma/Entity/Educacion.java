@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 
 
@@ -14,19 +15,21 @@ public class Educacion {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String nombreEstudio;
-    private String descripcion;
+   @Size(min = 1, max = 45, message = "no cumple con longitud")
+    private String fecha;
     
-    //Construtctores
+    @Size(min = 1, max = 200, message = "no cumple con longitud")
+    private String descripcion;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreEstudio, String descripcion) {
+    public Educacion(String nombreEstudio, String fecha, String descripcion) {
+        this.id = id;
         this.nombreEstudio = nombreEstudio;
         this.descripcion = descripcion;
+        this.fecha = fecha;
     }
-
- //Getters & setters
 
     public long getId() {
         return id;
@@ -44,6 +47,14 @@ public class Educacion {
         this.nombreEstudio = nombreEstudio;
     }
 
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
     public String getDescripcion() {
         return descripcion;
     }
@@ -53,5 +64,5 @@ public class Educacion {
     }
     
     
-    
+
 }
